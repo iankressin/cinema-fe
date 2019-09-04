@@ -3,9 +3,9 @@ import React from "react";
 import Box from "../Box";
 import { Img, Wrapper } from "./MovieCard";
 
-const MovieCard = ({ movieInfo, first }) => {
+const MovieCard = ({ first, movieInfo, numberOfColumns }) => {
   return (
-    <Wrapper color="white" first={first}>
+    <Wrapper first={first} numberOfColumns={numberOfColumns}>
       <Img src={require(`../../assets/${movieInfo.img}`)} />
       <p>{movieInfo.title}</p>
     </Wrapper>

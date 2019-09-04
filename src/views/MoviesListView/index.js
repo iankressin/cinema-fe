@@ -2,16 +2,11 @@ import React from "react";
 
 import MovieList from "../../components/MovieList";
 import Box from "../../components/Box";
-import Input from "../../components/Input";
 
 const MoviesListView = ({}) => {
   return (
-    <Box bg="#1d1d1d">
-      <Box>
-        <Input placeholder="Search" />
-      </Box>
+    <Box>
       <MovieList
-        style={{ marginLeft: "auto", marginRight: "auto" }}
         movieList={[
           {
             title: "O Rei Leão",
