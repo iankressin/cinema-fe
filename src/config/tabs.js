@@ -1,5 +1,5 @@
-import { FiFilm, FiClock, FiMapPin } from "react-icons/fi";
 import React from "react";
+import { FiFilm, FiClock, FiMapPin } from "react-icons/fi";
 
 export const tabs = [
   {

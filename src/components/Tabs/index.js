@@ -15,7 +15,7 @@ const Tabs = () => {
     <Wrapper>
       {tabs.map((tab, index) => {
         return (
-          <StyledLink active={index === activeTab} to={tab.path}>
+          <StyledLink key={index} active={index === activeTab} to={tab.path}>
             <Tab
               onClick={() => handleTabClick(index)}
               index={index}
