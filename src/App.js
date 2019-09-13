@@ -5,19 +5,18 @@ import Button from "./components/Button";
 import MoviesListView from "./views/MoviesListView";
 import TimeListView from "./views/TimeListView";
 import Tabs from "./components/Tabs";
+import MovieInfoView from "./components/MovieInfo";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact={true} component={MoviesListView} />
-          <Route path="/horarios" exact={true} component={TimeListView} />
-          <Route path="/cinemas" exact={true} component={Button} />
-        </Switch>
-        <Tabs />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true} component={MoviesListView} />
+        <Route path="/horarios" exact={true} component={TimeListView} />
+        <Route path="/cinemas" exact={true} component={MovieInfoView} />
+      </Switch>
+      <Tabs />
+    </BrowserRouter>
   );
 }
 

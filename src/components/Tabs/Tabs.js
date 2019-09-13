@@ -10,8 +10,13 @@ export const Wrapper = styled(Flex)`
   line-height: 45px
   height: 45px;
   position: fixed;
-  bottom: 0;
-`;
+  ${props => {
+    if (props.windowWidth === "lg" || props.windowWidth === "md") {
+      return "top: 0; line-height: 55px; height: 55px";
+    } else {
+      return "bottom: 0; line-height: 45px; height: 45px";
+    }
+  }}`;
 
 export const Tab = styled(Box)`
   cursor: pointer;

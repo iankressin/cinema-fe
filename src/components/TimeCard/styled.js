@@ -22,4 +22,5 @@ export const Wrapper = styled.div`
   margin-left: ${props =>
     props.first ? "0" : `${props.numberOfColumns * 10}px`};
   text-align: center;
+  background-color: red;
 `;

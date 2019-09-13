@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Flex from "../Flex";
 import { StyledLink, Tab, Wrapper } from "./Tabs";
 import { tabs } from "../../config/tabs";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const Tabs = () => {
+  const windowWidth = useWindowWidth();
   const [activeTab, setActive] = useState(0);
 
   const handleTabClick = index => {
@@ -12,7 +14,7 @@ const Tabs = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper windowWidth={windowWidth}>
       {tabs.map((tab, index) => {
         return (
           <StyledLink key={index} active={index === activeTab} to={tab.path}>

@@ -6,7 +6,7 @@ export const movieResponsiveColumns = {
 };
 
 export const timeResponsiveColumns = {
-  lg: 1,
+  lg: 2,
   md: 2,
   sm: 1,
   xs: 1

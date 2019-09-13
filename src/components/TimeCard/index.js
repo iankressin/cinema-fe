@@ -8,8 +8,8 @@ const TimeCard = ({ movieInfo, first, numberOfColumns }) => {
   const lastTime = movieInfo.times.length - 1;
 
   return (
-    <Box mt="15px">
-      <Flex>
+    <Box mt="15px" marginLeft="10px">
+      <Flex margin="auto">
         <Img src={require(`../../assets/${movieInfo.img}`)} />
         <Box ml="20px" mt="15px">
           <Title>{movieInfo.title}</Title>

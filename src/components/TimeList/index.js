@@ -36,28 +36,24 @@ const TimeList = ({ movieList }) => {
 
   return (
     <Wrapper>
-      {movieList.map(movie => {
-        return (
-          state.rows &&
-          state.rows.map((columns, index) => {
-            return (
-              <Box>
-                <Flex key={index} style={{ marginLeft: "auto" }}>
-                  {columns.map((movie, index) => {
-                    return (
-                      <TimeCard
-                        numberOfColumns={state.numberOfColumns}
-                        movieInfo={movie}
-                        key={index}
-                      />
-                    );
-                  })}
-                </Flex>
-              </Box>
-            );
-          })
-        );
-      })}
+      {state.rows &&
+        state.rows.map((columns, index) => {
+          return (
+            <Box>
+              <Flex key={index} style={{ marginLeft: "auto" }}>
+                {columns.map((movie, index) => {
+                  return (
+                    <TimeCard
+                      numberOfColumns={state.numberOfColumns}
+                      movieInfo={movie}
+                      key={index}
+                    />
+                  );
+                })}
+              </Flex>
+            </Box>
+          );
+        })}
     </Wrapper>
   );
 };
