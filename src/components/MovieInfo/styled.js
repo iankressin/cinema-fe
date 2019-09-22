@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Box from "../../components/Box";
+import Box from '../../components/Box';
 
 export const Img = styled.img`
   width: 150px;
@@ -9,10 +9,10 @@ export const Img = styled.img`
 }
 `;
 
-export const Title = styled.h4`
+export const Header = styled.h4`
   font-weight: 700;
   margin: 0;
-  font-size: ${props => (props.type === "info" ? "2em" : "1em")};
+  font-size: ${props => (props.type === 'title' ? '2em' : '1em')};
 `;
 
 export const Wrapper = styled(Box)`

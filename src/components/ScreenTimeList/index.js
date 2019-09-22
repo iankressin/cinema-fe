@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import Box from "../../components/Box";
-import Flex from "../../components/Flex";
-import TimeCard from "../TimeCard";
+import Box from "../Box";
+import Flex from "../Flex";
+import TimeCard from "../ScreenTimeCard";
 import { timeResponsiveColumns } from "../../config/responsiveColumns";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import { Wrapper } from "./styled";

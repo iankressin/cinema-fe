@@ -31,8 +31,9 @@ const useWindowWidth = () => {
     if (width < 576) {
       setScreenWidth("xs");
     }
-  };
-
+  
+  
+  }
   return screenWidth;
 };
 

@@ -1,19 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {useState, useRef, useEffect} from 'react';
 
-import Box from "../Box";
-import Flex from "../Flex";
-import MovieCard from "../MovieCard";
-import { movieResponsiveColumns } from "../../config/responsiveColumns";
-import useWindowWidth from "../../hooks/useWindowWidth";
-import { Wrapper } from "./MovieList";
+import Box from '../Box';
+import Flex from '../Flex';
+import MovieCard from '../MovieCard';
+import {movieResponsiveColumns} from '../../config/responsiveColumns';
+import useWindowWidth from '../../hooks/useWindowWidth';
+import {Wrapper} from './MovieList';
 
-const MovieList = ({ movieList }) => {
+const MovieList = ({movieList}) => {
   const windowWidth = useWindowWidth();
-  const [state, setState] = useState({ rows: [], numberOfColumns: 0 });
+  const [state, setState] = useState({rows: [], numberOfColumns: 0});
 
   useEffect(
     () => setState(chunkMoviesInGroups(movieResponsiveColumns[windowWidth])),
-    [windowWidth]
+    [windowWidth],
   );
 
   const chunkMoviesInGroups = size => {
@@ -23,7 +23,7 @@ const MovieList = ({ movieList }) => {
       myArray.push(movieList.slice(i, i + size));
     }
     console.log(myArray);
-    return { rows: myArray, numberOfColumns: size };
+    return {rows: myArray, numberOfColumns: size};
   };
 
   if (state.rows === [] || state.numberOfColumns === 0) {
@@ -36,7 +36,7 @@ const MovieList = ({ movieList }) => {
         state.rows.map((columns, index) => {
           return (
             <Box>
-              <Flex key={index} style={{ marginLeft: "auto" }}>
+              <Flex key={index} style={{marginLeft: 'auto'}}>
                 {columns.map((movie, index) => {
                   return (
                     <MovieCard
