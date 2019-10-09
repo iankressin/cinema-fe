@@ -1,15 +1,15 @@
 import React from "react";
 
 import Box from "../../components/Box";
+import ContentFrame from "../../components/ContentFrame";
 import MovieList from "../../components/MovieList";
 import { movies } from "../../config/api";
 
 const MoviesListView = ({}) => {
-  console.log(movies);
   return (
-    <Box>
+    <ContentFrame>
       <MovieList movieList={movies} />
-    </Box>
+    </ContentFrame>
   );
 };
 

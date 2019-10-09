@@ -22,12 +22,11 @@ const MovieList = ({movieList}) => {
     for (var i = 0; i < movieList.length; i += size) {
       myArray.push(movieList.slice(i, i + size));
     }
-    console.log(myArray);
     return {rows: myArray, numberOfColumns: size};
   };
 
   if (state.rows === [] || state.numberOfColumns === 0) {
-    return <h1>LOADING..</h1>;
+    return <h1>LOADING...</h1>;
   }
 
   return (
