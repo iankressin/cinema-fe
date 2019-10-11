@@ -1,5 +1,6 @@
 import React from "react";
 
+import Badge from "../../components/Badge";
 import Box from "../../components/Box";
 import Flex from "../../components/Flex";
 import { Img, Header, Wrapper } from "./styled";
@@ -11,27 +12,30 @@ const MovieInfo = ({ movieInfo }) => {
       <Box mx="auto">
         <Flex textAlign="center">
           <Img src={require(`../../assets/bacurau.jpg`)} />
-          <Header type="title">{movieInfo.title}</Header>
-          <Box textAlign="left" maxWidth="200px">
+          <Box textAlign="left" maxWidth="400px" ml="30px">
+            <Header type="title">{movieInfo.title}</Header>
+            <Badge badges={["Drama", "120 min", "Jose Maria"]} />
             <ReadMore>{movieInfo.description}</ReadMore>
           </Box>
         </Flex>
-        <Box maxWidth="600px" mx="auto"></Box>
         <Box>
-          {movieInfo.cinemas.map(cinema => {
-            return (
-              <Box marginTop="20px">
-                <Header>{cinema.name}</Header>
-                <p>
-                  {cinema.screenTime.map((time, index) => {
-                    return cinema.screenTime.length - 1 === index
-                      ? `${time}`
-                      : `${time},  `;
-                  })}
-                </p>
-              </Box>
-            );
-          })}
+          <h2>Cinemas</h2>
+          <Box>
+            {movieInfo.cinemas.map(cinema => {
+              return (
+                <Box marginTop="20px">
+                  <Header>{cinema.name}</Header>
+                  <p>
+                    {cinema.screenTime.map((time, index) => {
+                      return cinema.screenTime.length - 1 === index
+                        ? `${time}`
+                        : `${time},  `;
+                    })}
+                  </p>
+                </Box>
+              );
+            })}
+          </Box>
         </Box>
       </Box>
     </Wrapper>
