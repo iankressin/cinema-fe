@@ -15,6 +15,7 @@ function App() {
         <Route path="/horarios" exact={true} component={ScreenTimeListView} />
         <Route path="/cinemas" exact={true} component={MovieInfoView} />
       </Switch>
+      <Tabs />
     </BrowserRouter>
   );
 }

@@ -6,7 +6,6 @@ import Tabs from "../Tabs";
 const ContentFrame = ({ children }) => {
   return (
     <>
-      <Tabs />
       <ContentWrapper windowWidth="lg">{children}</ContentWrapper>
     </>
   );

@@ -16,6 +16,7 @@ const MovieInfoView = () => {
       }
     ]
   };
+
   return (
     <ContentFrame>
       <MovieInfo movieInfo={movieInfo} />
