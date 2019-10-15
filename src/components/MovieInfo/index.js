@@ -5,6 +5,7 @@ import Box from "../../components/Box";
 import Flex from "../../components/Flex";
 import { Img, Header, Wrapper } from "./styled";
 import ReadMore from "../../components/ReadMore";
+import Tabs from "../../components/Tabs";
 
 const MovieInfo = ({ movieInfo }) => {
   return (
@@ -20,6 +21,7 @@ const MovieInfo = ({ movieInfo }) => {
         </Flex>
         <Box>
           <h2>Cinemas</h2>
+          <Tabs />
           <Box>
             {movieInfo.cinemas.map(cinema => {
               return (
